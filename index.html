@@ -1,0 +1,43 @@
+<!--html starting tag and root module name - ng-app-->
+<html ng-app>
+<head>
+<title>AngularJS Calculator</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script src="calc.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap-min.css">
+<head>
+ <body>
+ 
+ <!--ng controller div starts and its name Calculator-->
+ <div ng-controller="Calculator">
+        
+        
+ <!--enter one value in text box-->      
+ <div class="offset4 span6 well">
+ <label>Enter a value :</label>
+ <input ng-model="firstNumber" type="text"> <br/>
+            
+            
+ <!--select any one operator + , - , * , / -->          
+ <label>Operator:</label>
+ <select ng-model="selectedOperator" 
+ ng-options="operator for operator in operators"></select> 
+ <br/>
+     
+     
+ <!--enter another value-->            
+ <label>Enter another value:</label>
+ <input ng-model="secondNumber" type="text"> <br/>
+   
+   
+ <!--click button to  calculate two values-->           
+ <button ng-click="calculate()">Calculate</button> <br/>
+      
+      
+ <!--display the result-->           
+ Result: {{result}}
+ </div>
+ </div>
+ </body>
+</html>
